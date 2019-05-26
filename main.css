@@ -1,0 +1,475 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+* { /*seleciona todos os itens (lembra sql)*/
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*evita que o padding afete a larguara e altura*/
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+a {
+  color: #fff;
+  display: flex;
+  justify-items: center;
+  padding: auto;
+  margin: auto;
+}
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left, #f46b45, #eea849);
+  height: 50px;
+  padding: 16px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(233, 162, 8, 0.877);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+body {
+  background-image: url(../img/BossWebSo.png);
+  background-size: cover;
+}
+
+nav {
+  background-color:rgba(255, 153, 0, 0.5);
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 20px;
+}
+aside, main {
+  
+  padding: 45px;
+  height: fit-content;
+  
+}
+input, button {
+  font-size: 15px;
+}
+main {  
+  color:rgb(39, 16, 56);
+}
+
+footer  {
+  background-color:rgba(0, 0, 0, 0.5);
+  padding: 24px;
+  color: white;
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+/*========slideshow====================*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* esconde as imagens */
+.mySlides {
+  display: none;
+  height: auto;
+}
+
+/* botoes prev next*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* posiciona next a doreita */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, adiciona um fundo mais escuro ao botão */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* texto mostrado com o ponteiro do mouse em cima da imagem */
+.text {
+  color: #f2f2f2;
+  font-size: 32px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 32px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* transição */
+.fade {
+    max-width: 100%;
+    height: auto;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.icone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #00BAF0;
+  background: linear-gradient(to left, #f46b45, #eea849);
+  height: 50px;
+  padding: 16px;
+  width: 100%;
+}
+.icones{
+  list-style: none;
+  display: flex;
+  flex-flow: line;
+  justify-content: center;
+  /* deixa responsivo*/
+}
+.icones li {
+  padding: 8px;
+  border-top:1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.icones li:hover {
+  background-color:rgb(255, 136, 0);
+}
+.icones a {
+  color: #ffffff;
+  text-decoration: none;
+ 
+}
+.icones a:hover {
+  background-color:rgb(255, 136, 0);
+}
+/*=======================================================================
+NAVEGAÇÃO
+*/
+.navbar{
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  
+  /* deixa responsivo*/
+}
+.navbar li {
+  padding: 8px;
+  border:1px solid rgba(255, 255, 255, 0.3);
+  
+}
+.navbar li:hover {
+  background-color: red;
+  
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#logo{
+  display: flex;
+  float: left;  
+}
+.lateral {
+
+  list-style: none;
+  flex-flow: column wrap;
+  
+  /* deixa responsivo*/
+}
+.lateral li {
+  padding: 12px;
+  border:2px solid rgba(255, 255, 255, 0.3);
+  border-collapse: collapse;
+}
+.lateral a {
+  font-family: sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  
+}
+.lateral li:hover {
+  background-color: rgb(255, 145, 0);
+}
+.foto {
+  border-radius: 50%;
+}
+.perfil {
+  padding: 25px;
+  background-color: rgba(214, 134, 29, 0.616);
+}
+.fas{
+  display: flex;
+  justify-content: flex-end;
+}
+.column {
+  flex-flow: column wrap;
+  float: left;
+  width: 15%;
+}
+#col1 {
+  width: 55%;
+}
+/*menu*/
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background:rgb(255, 145, 0);
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  content: '';
+  display: flex;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.menu-icon .navicon:before {
+  top: 5px;
+  
+}
+.menu-icon .navicon:after {
+  top: -5px;
+  
+}
+
+/* menu btn */
+
+.menu-btn {
+  display: none;
+}
+.menu-btn:checked ~ .menu {
+  max-height: 240px;
+  
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: flex;
+  clear: both;
+}
+@media (min-width: 768px) {
+  
+  .column {
+    justify-content: flex-end;
+    flex-flow: column wrap;
+  }
+  .navbar {
+    justify-content: flex-end;/*alinha itens do menu a direita*/
+    flex-flow: row wrap;
+  }
+  li {
+    border-bottom: 2px solid ;
+    
+    display: block;
+    font-size: 1.5em;
+    padding: 2em 0;
+  }
+  
+  #container {
+    display: flex;
+  }    
+  main {
+    flex: 75%;
+  }
+  aside {
+    flex: 25%;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 600px) {
+
+}
+@media screen and (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: rgba(180, 107, 24, 0.637);
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  .column {
+    width: 100%;
+    padding: 5%;
+  }
+}

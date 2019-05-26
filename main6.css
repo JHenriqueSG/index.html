@@ -1,0 +1,256 @@
+* { /*seleciona todos os itens (lembra sql)*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*evita que o padding afete a larguara e altura*/
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-image: url(../img/databases.png);
+    background-size: cover;
+}
+
+nav {
+    
+    background-color:rgba(255, 166, 0, 0.678);
+    color: white;
+}
+input, button {
+    font-size: 20px;
+}
+aside, main {
+    
+    color: rgb(6, 22, 8);
+    padding: 20px;
+}
+
+main {  
+    color:rgb(0, 0, 0);
+    
+}
+footer  {
+    background-color:rgba(248, 144, 7, 0.774);
+    
+    color: white;
+}
+h1, h3 {
+    margin: auto;
+}
+p {
+    margin: 20px auto;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+/*=============ASIDE======================*/
+.foto {
+    border-radius: 50%;
+}
+.perfil {
+    padding: 25px;
+    background-color: rgba(214, 134, 29, 0.616);
+}
+.fas{
+    display: flex;
+    justify-content: flex-end;
+}
+.lateral {
+    list-style: none;
+    flex-flow: column wrap;
+    /* deixa responsivo*/
+}
+.lateral a {
+    font-family: sans-serif;
+    color: rgb(39, 16, 56);
+    text-decoration: none;
+    
+}
+.lateral li:hover {
+    background-color: rgb(255, 196, 0);
+}
+/*RODAPÉ=======================================================*/
+/* Cria 3 colunas de mesmo tamanho uma ao lado da outra */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*=======================================================================
+NAVEGAÇÃO
+*/
+.navbar, .lateral {
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap; 
+}
+.navbar li, .lateral li {
+    padding: 12px;
+    border-top:1px solid rgba(7, 6, 6, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.navbar a, .lateral a  {
+    font-family: sans-serif;
+    color: #ffffff;
+    text-decoration: none;    
+}
+#pesquisa{
+    display: flex;
+    flex-flow: line;
+    justify-content: center;  
+}
+#logo{
+    display: flex;
+    padding: 2px 45%;
+    font-size: 15px;
+}
+.navbar li:hover, .lateral li:hover, .icones li:hover  {
+    background-color: rgb(255, 81, 0);
+}
+/*=======================================================*/
+
+.icones{
+    list-style: none;
+    display: flex;
+    flex-flow: line wrap;
+    justify-content: center;
+}
+.icones li {
+    padding: 8px;
+    border-top:1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*========slideshow====================*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* esconde as imagens */
+  .mySlides {
+    display: none;
+    height: auto;
+  }
+  
+  /* botoes prev next*/
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* posiciona next a doreita */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, adiciona um fundo mais escuro ao botão */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* texto mostrado com o ponteiro do mouse em cima da imagem */
+  .text {
+    color: #f2f2f2;
+    font-size: 32px;
+    font-weight: bolder;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/6 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 32px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* transição */
+  .fade {
+      max-width: 100%;
+      height: auto;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+@media (min-width: 768px) {
+    
+    .navbar {
+        justify-content: flex-end;/*alinha itens do menu a direita*/
+        flex-flow: row wrap;
+    }
+    #container {
+        display: flex;
+    }
+    main {
+        flex: 75%;
+    }
+    aside {
+        flex: 25%;
+    }
+}
+@media (max-width: 760px) {
+    * {
+        height: fit-content;
+    }
+    .column {
+        width: 100%;
+    }
+    .fade {
+        display: flex;
+        max-width: 100%;
+        height: auto;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    .mySlides {
+        display: flex;
+        height: auto;
+      }
+}
+
+/*.lateral {
+    list-style: none;
+    flex-flow: column wrap;
+    /* deixa responsivo*/

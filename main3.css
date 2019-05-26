@@ -1,0 +1,271 @@
+* { /*seleciona todos os itens (lembra sql)*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*evita que o padding afete a larguara e altura*/
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-image: url(../img/BossWebSisA.png);
+    background-size: cover;
+}
+nav {
+    background-color:rgba(255, 174, 0, 0.507);
+    color: white;
+}
+input, button {
+    font-size: 20px;
+}
+
+aside, main {
+    
+    color: rgb(43, 50, 141);
+    padding: 32px;
+    height: fit-content;
+}
+
+aside {
+    border-right: 3px 3px solid rgb(58, 73, 207);
+}
+
+main {
+    
+    color:rgb(39, 16, 56);
+}
+
+footer  {
+    background-color:rgba(248, 142, 4, 0.541);
+    padding: 24px;
+    color: white;
+}
+/*========slideshow====================*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* esconde as imagens */
+.mySlides {
+    display: none;
+    height: auto;
+}
+
+/* botoes prev next*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* posiciona next a doreita */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, adiciona um fundo mais escuro ao botão */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* texto mostrado com o ponteiro do mouse em cima da imagem */
+.text {
+    color: #f2f2f2;
+    font-size: 32px;
+    font-weight: bolder;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 32px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* transição */
+.fade {
+    max-width: 100%;
+    height: auto;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+/*=======================================================================
+NAVEGAÇÃO
+*/
+.navbar{
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    
+    /* deixa responsivo*/
+}
+.navbar li {
+    padding: 12px;
+    border-top:1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.navbar li:hover {
+    background-color: rgb(255, 174, 0);
+}
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+#pesquisa{
+    display: flex;
+    flex-flow: column;
+    padding-top: 10px;
+    padding-right: 15%; 
+    padding-left: 15%;
+    font-size:20px;
+}
+#logo{
+    display: flex;
+    position: absolute;
+    padding-top: 7px;
+}
+/*============ASIDE==================================================*/
+.foto {
+    border-radius: 50%;
+}
+.perfil {
+    padding: 25px;
+    background-color: rgba(214, 134, 29, 0.616);
+}
+.fas{
+    display: flex;
+    justify-content: flex-end;
+}
+.lateral {
+    
+    list-style: none;
+    flex-flow: column wrap;
+    
+    /* deixa responsivo*/
+}
+.lateral li {
+    padding: 12px;
+    border:2px solid rgba(255, 255, 255, 0.3);
+    border-collapse: collapse;
+}
+.lateral a {
+    font-family: sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+.lateral li:hover {
+    background-color: rgb(255, 136, 0);
+}
+.column {
+    display: flex;
+    flex-flow: column wrap;
+    width: 15%;
+}
+#col1 {
+    width: 55%;
+}
+.icone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #00BAF0;
+    background: linear-gradient(to left, #f46b45, #eea849);
+    height: 50px;
+    padding: 16px;
+    width: 100%;
+}
+.icones{
+    list-style: none;
+    display: flex;
+    flex-flow: line;
+    justify-content: center;
+    /* deixa responsivo*/
+}
+.icones li {
+    padding: 8px;
+    border-top:1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.icones li:hover {
+    background-color:rgb(255, 136, 0);
+}
+.icones a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+.icones a:hover {
+    background-color:rgb(255, 136, 0);
+}
+@media (min-width: 768px) {
+    
+    .column {
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: column wrap;
+        width: 80%;
+    }
+    .navbar {
+        
+        justify-content: flex-end;/*alinha itens do menu a direita*/
+        flex-flow: row wrap;
+    }
+    
+    #container {
+        display: flex;
+    }
+    
+    main {
+        flex: 75%;
+    }
+    aside {
+        flex: 25%;
+    }
+    @media screen and (max-width: 550px) {
+        #pesquisa{
+            display: flex;
+            flex-flow: column;
+            padding-top: 10px;
+            padding-right: 5%; 
+            padding-left: 5%;
+            font-size:20px;
+        }
+        
+    }
+}
